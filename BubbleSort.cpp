@@ -15,16 +15,15 @@ int main()
         arr[i] = UI;
     }
 
-    for (int i = 0; i < n - 1; i++)
+    for (int i = n - 1; i >= 1; i--)
     {
-
-        for (int j = i + 1; j < n; j++)
+        for (int j = 0; j <= i - 1; j++)
         {
-            if (arr[j] < arr[i])
+            if (arr[j] > arr[j + 1])
             {
                 int temp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = temp;
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
             }
         }
     }
